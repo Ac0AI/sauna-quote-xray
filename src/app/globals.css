@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap')
+layer(base);
+
+@import 'tailwindcss';
+
+@theme {
+  /*
+    Sauna Guide foundations.
+    Raw material colors remain for backwards compatibility. New UI should use
+    the semantic tokens below so the product can evolve without page-by-page
+    color rewrites.
+  */
+  --color-sauna-paper: #fafaf8;
+  --color-sauna-linen: #f5f3ef;
+  --color-sauna-cream: #ebe8e2;
+  --color-sauna-ash: #e0ddd7;
+  --color-sauna-fog: #c5c2bc;
+  --color-sauna-stone: #8b8884;
+  --color-sauna-slate: #605c57;
+  --color-sauna-ink: #2b2926;
+  --color-sauna-charcoal: #1c1917;
+  --color-sauna-night: #0f0e0d;
+  --color-sauna-white: #ffffff;
+  --color-sauna-birch: #d4c9b8;
+  --color-sauna-cedar: #b8a68a;
+  --color-sauna-oak: #9d826b;
+  --color-sauna-walnut: #7a6655;
+  --color-sauna-bark: #4a403a;
+  --color-sauna-copper: #a68b6b;
+  --color-sauna-sand: #c4b5a0;
+  --color-sauna-brass: #9a8560;
+  --color-sauna-bronze: #7a6b55;
+  --color-sauna-ember: #b87b5a;
+  --color-sauna-glow: #d4a574;
+  --color-sauna-warm: #e8d5c4;
+
+  /* Semantic color roles. */
+  --color-canvas: var(--color-sauna-paper);
+  --color-surface: var(--color-sauna-white);
+  --color-surface-subtle: var(--color-sauna-linen);
+  --color-surface-strong: var(--color-sauna-charcoal);
+  --color-text: var(--color-sauna-ink);
+  --color-text-muted: var(--color-sauna-slate);
+  --color-text-faint: var(--color-sauna-stone);
+  --color-text-inverse: var(--color-sauna-paper);
+  --color-border: var(--color-sauna-ash);
+  --color-border-strong: var(--color-sauna-fog);
+  --color-action: var(--color-sauna-ember);
+  --color-action-hover: var(--color-sauna-glow);
+  --color-action-muted: var(--color-sauna-warm);
+  --color-on-action: var(--color-sauna-night);
+  --color-action-strong: var(--color-sauna-charcoal);
+  --color-action-strong-hover: var(--color-sauna-bark);
+  --color-on-action-strong: var(--color-sauna-paper);
+  --color-focus: var(--color-sauna-walnut);
+  --color-positive: #23613f;
+  --color-positive-bg: #e5f2e9;
+  --color-warning: #8a5a12;
+  --color-warning-bg: #faf0db;
+  --color-danger: #a13a32;
+  --color-danger-hover: #842f29;
+  --color-danger-bg: #f9e8e6;
+  --color-signal: var(--color-sauna-copper);
+  --color-signal-strong: var(--color-sauna-walnut);
+  --color-signal-bg: var(--color-sauna-cream);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+
+  /* Paper master: responsive and container contract. */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --container-sm: 672px;
+  --container-md: 896px;
+  --container-lg: 1152px;
+  --container-xl: 1280px;
+
+  /* Type scale. Display is editorial, body and utility remain functional. */
+  --text-display-xl: clamp(3rem, 7vw, 5.5rem);
+  --text-display-xl--line-height: 0.96;
+  --text-display-lg: clamp(2.5rem, 5vw, 4.25rem);
+  --text-display-lg--line-height: 1;
+  --text-display-md: clamp(2rem, 3.5vw, 3.25rem);
+  --text-display-md--line-height: 1.04;
+  --text-title-lg: 2rem;
+  --text-title-lg--line-height: 2.25rem;
+  --text-title-md: 1.5rem;
+  --text-title-md--line-height: 1.875rem;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.75rem;
+  --text-body: 1rem;
+  --text-body--line-height: 1.625rem;
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.375rem;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --tracking-tight: -0.02em;
+  --tracking-utility: 0.16em;
+  --leading-caption: 1rem;
+  --leading-body-sm: 1.375rem;
+  --leading-body: 1.625rem;
+  --leading-body-lg: 1.75rem;
+  --leading-title-md: 1.875rem;
+  --leading-title-lg: 2.25rem;
+  --leading-display-md: 3.375rem;
+  --leading-display-lg: 4.25rem;
+  --leading-display-xl: 5.25rem;
+
+  /* Explicit spacing steps mirrored from Paper. */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+
+  /* Geometry and depth. */
+  --radius-action: 0.375rem;
+  --radius-control: 0.625rem;
+  --radius-surface: 0.75rem;
+  --radius-panel: 1rem;
+  --radius-pill: 999px;
+  --shadow-hairline: 0 0 0 1px rgb(43 41 38 / 0.05);
+  --shadow-raised: 0 16px 40px -24px rgb(15 14 13 / 0.28);
+  --shadow-overlay: 0 28px 80px -28px rgb(15 14 13 / 0.42);
+
+  /* Motion. Short, interruptible transitions for product UI. */
+  --ease-ui-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-ui-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --duration-ui-fast: 120ms;
+  --duration-ui: 180ms;
+  --duration-ui-slow: 240ms;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 6s ease-in-out 2s infinite;
+  --animate-float-slow: float 8s ease-in-out 1s infinite;
+  --animate-glow: glow 3s ease-in-out infinite;
+  --animate-steam: steam 4s ease-in-out infinite;
+  --animate-fade-up: fadeUp 0.8s ease-out forwards;
+  --animate-fade-up-delayed: fadeUp 0.8s ease-out 0.2s forwards;
+  --animate-scale-in: scaleIn 0.6s ease-out forwards;
+  --animate-shimmer: shimmer 4s ease-in-out infinite;
+  --animate-spin-slow: spin-glow 6s linear infinite;
+  --animate-orbit-spark: orbit-spark 4s linear infinite;
+  --animate-sparkle: sparkle 2s ease-in-out infinite;
+
+  @keyframes orbit-spark {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
+  @keyframes sp1 { 0% { transform: translate(0,0); opacity:1 } 100% { transform: translate(8px,-14px); opacity:0 } }
+  @keyframes sp2 { 0% { transform: translate(0,0); opacity:1 } 100% { transform: translate(-6px,-16px); opacity:0 } }
+  @keyframes sp3 { 0% { transform: translate(0,0); opacity:1 } 100% { transform: translate(12px,-8px); opacity:0 } }
+  @keyframes sp4 { 0% { transform: translate(0,0); opacity:1 } 100% { transform: translate(-3px,-20px); opacity:0 } }
+  @keyframes sp5 { 0% { transform: translate(0,0); opacity:1 } 100% { transform: translate(10px,-12px); opacity:0 } }
+  @keyframes sp6 { 0% { transform: translate(0,0); opacity:1 } 100% { transform: translate(-9px,-10px); opacity:0 } }
+  @keyframes sp7 { 0% { transform: translate(0,0); opacity:1 } 100% { transform: translate(5px,-18px); opacity:0 } }
+  @keyframes sp8 { 0% { transform: translate(0,0); opacity:1 } 100% { transform: translate(14px,-6px); opacity:0 } }
+  @keyframes sp9 { 0% { transform: translate(0,0); opacity:0.9 } 100% { transform: translate(-10px,-13px); opacity:0 } }
+  @keyframes sp10 { 0% { transform: translate(0,0); opacity:0.8 } 100% { transform: translate(7px,-22px); opacity:0 } }
+  @keyframes sp11 { 0% { transform: translate(0,0); opacity:1 } 100% { transform: translate(-4px,-17px); opacity:0 } }
+  @keyframes sp12 { 0% { transform: translate(0,0); opacity:0.9 } 100% { transform: translate(16px,-9px); opacity:0 } }
+  @keyframes spin-glow {
+    from {
+      rotate: 0deg;
+    }
+    to {
+      rotate: 360deg;
+    }
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes glow {
+    0%,
+    100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  @keyframes steam {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100px) scale(1.5);
+    }
+  }
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-canvas);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection styling - muted and refined */
+::selection {
+  background: color-mix(in srgb, var(--color-action) 22%, transparent);
+  color: var(--color-text);
+}
+
+/* Custom scrollbar - subtle and elegant */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAF8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5C2BC;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9D826B;
+}
+
+/* Focus styles - understated */
+*:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+[role='button'] {
+  touch-action: manipulation;
+}
+
+/* Shared control contract used by the component layer. */
+.sg-field-control {
+  width: 100%;
+  min-height: 2.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: 0.75rem 0.875rem;
+  transition:
+    border-color var(--duration-ui) var(--ease-ui-out),
+    box-shadow var(--duration-ui) var(--ease-ui-out),
+    background-color var(--duration-ui) var(--ease-ui-out);
+}
+
+.sg-field-control::placeholder {
+  color: var(--color-text-faint);
+}
+
+.sg-field-control:hover:not(:disabled) {
+  border-color: var(--color-border-strong);
+}
+
+.sg-field-control:focus-visible {
+  border-color: var(--color-action);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-focus) 20%, transparent);
+  outline: none;
+}
+
+.sg-field-control[aria-invalid='true'] {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-danger) 14%, transparent);
+}
+
+.sg-field-control:disabled {
+  cursor: not-allowed;
+  background: var(--color-surface-subtle);
+  color: var(--color-text-faint);
+  opacity: 0.72;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Calculator jumps and primary decisions need a stronger, context-aware ring. */
+.sauna-calculator-focus-light:focus {
+  outline: 3px solid var(--color-sauna-ink);
+  outline-offset: 4px;
+}
+
+.sauna-calculator-focus-dark:focus {
+  outline: 3px solid var(--color-sauna-glow);
+  outline-offset: 4px;
+}
+
+.sauna-calculator-control-focus {
+  outline-color: var(--color-sauna-ink);
+}
+
+.sauna-calculator-control-focus:focus-visible {
+  outline-style: solid;
+  outline-width: 3px;
+  outline-offset: 3px;
+}
+
+/* Smooth image loading */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Brand-index directory: a real table from md up, one card per row below it.
+   Same DOM in both, so crawlers and AI never meet the brands twice.
+   Spec and rationale: guides/BRAND-INDEX-SPEC.md */
+.brand-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  /* The table box has to leave table layout, or it keeps sizing itself to the
+     widest cell and drags the rows past the viewport edge. */
+  .brand-table,
+  .brand-table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .brand-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .brand-table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 0.75rem;
+    border: 1px solid var(--color-sauna-ash);
+    border-radius: 12px;
+    background: #fff;
+    padding: 0.875rem 1rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Rank and brand share the card's first line, everything else stacks full width. */
+  .brand-table tbody td[data-label='Rank'] {
+    flex: 0 0 auto;
+  }
+
+  .brand-table tbody th {
+    flex: 1 1 60%;
+    min-width: 0;
+  }
+
+  .brand-table tbody td:not([data-label='Rank']) {
+    flex: 0 0 100%;
+    min-width: 0;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-sauna-ash);
+  }
+
+  /* Label above value: the quote-risk and best-for cells are full sentences,
+     and a side-by-side label would squeeze them into a ragged column. */
+  .brand-table tbody td:not([data-label='Rank'])::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-sauna-walnut);
+  }
+
+  .brand-table .brand-table-cell-value {
+    display: block;
+    min-width: 0;
+  }
+}
