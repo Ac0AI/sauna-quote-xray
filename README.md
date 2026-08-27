@@ -6,6 +6,10 @@ Sauna Quote X-Ray is a browser-native WebMCP app created for the [2026 WebMCP Ch
 
 **Live app:** [sauna-quote-xray.vercel.app/tools/sauna-quote-xray](https://sauna-quote-xray.vercel.app/tools/sauna-quote-xray)
 
+Built by [Sauna Guide](https://sauna.guide), the independent home sauna buying guide.
+
+![Sauna Quote X-Ray shared WebMCP canvas](./public/screenshots/sauna-quote-xray-desktop.png)
+
 ## Why WebMCP matters here
 
 A sauna quote can look complete while excluding the $600 to $1,800 circuit, a $1,500 to $3,000 panel upgrade, permits, site work, ventilation, or service responsibility. The agent is good at turning messy scope into structure. The human knows what the seller actually promised. WebMCP lets both work on the same visible state.
@@ -48,7 +52,7 @@ pnpm install
 pnpm dev
 ```
 
-Open `http://localhost:3000/tools/sauna-quote-xray`. ChatGPT's in-app browser supports WebMCP directly. For Chrome, follow the current challenge instructions or provide a valid `WEBMCP_ORIGIN_TRIAL_TOKEN` in `.env.local`.
+Open `http://localhost:3000/tools/sauna-quote-xray`. ChatGPT's in-app browser supports WebMCP directly. For Chrome, use Chrome 149 or later, enable `chrome://flags/#enable-webmcp-testing`, and restart the browser.
 
 ## Verify
 
@@ -84,6 +88,10 @@ Public seller price observations and the limited installation ranges live in `sr
 - The page states where estimates remain unpriced and links to buyer-facing source guides.
 
 See [SECURITY.md](./SECURITY.md) and [NOTICE.md](./NOTICE.md).
+
+## Submission media
+
+The desktop, full-canvas, mobile, and 3:2 Devpost images in `public/screenshots` are captures of the working production app after real WebMCP tool calls. `scripts/record-demo.mjs` records the same live reviewer-safe journey for the public demo video. The narration source is in `demo/narration.txt`.
 
 ## License
 

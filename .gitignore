@@ -7,3 +7,8 @@ test-results/
 .DS_Store
 *.tsbuildinfo
 .vercel
+demo/*.aiff
+demo/*.mp4
+demo/*.webm
+demo/raw/
+demo/review/

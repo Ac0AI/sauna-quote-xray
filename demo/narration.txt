@@ -1,0 +1,11 @@
+Sauna quotes look complete, but the number on the last page is rarely the number a buyer finally pays.
+
+This is Sauna Quote X-Ray, a shared decision canvas for a buyer and their AI agent. Inside ChatGPT's in-app browser, the page registers eight narrow WebMCP tools. The agent can load a safe synthetic quote, inspect the current state, add or correct line items, resolve scope, and build contractor questions.
+
+Here I ask the agent to load the backyard barrel quote. The visible canvas updates immediately. Three priced items total eleven thousand seven hundred and fifty dollars.
+
+Next, the agent marks electrical work as excluded and the foundation as unclear. It does not send a lead, contact a seller, or persist customer data. The same page now shows a projected landed-cost range from twelve thousand two hundred and fifty to eighteen thousand six hundred and fifty dollars, using cited planning ranges.
+
+Finally, the agent turns every unresolved scope item into a question the buyer can ask before signing. Every change appears in the shared activity log and remains visible and reversible for the human.
+
+This is what WebMCP makes possible: the agent does not replace the website. It works through the website's trusted interface, while the buyer keeps control of every assumption.
