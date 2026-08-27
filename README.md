@@ -91,7 +91,7 @@ See [SECURITY.md](./SECURITY.md) and [NOTICE.md](./NOTICE.md).
 
 ## Submission media
 
-The desktop, full-canvas, mobile, and 3:2 Devpost images in `public/screenshots` are captures of the working production app after real WebMCP tool calls. `scripts/record-demo.mjs` records the same live reviewer-safe journey for the public demo video. The narration source is in `demo/narration.txt`.
+The desktop, full-canvas, mobile, 3:2 Devpost, and 16:9 YouTube images in `public/screenshots` are based on captures of the working production app after real WebMCP tool calls. `scripts/record-demo.mjs` records the same live reviewer-safe journey for the public demo video. The narration source is in `demo/narration.txt`, and the reproducible YouTube artwork is in `demo/youtube-thumbnail.svg`.
 
 ## License
 
