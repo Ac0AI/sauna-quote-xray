@@ -4,6 +4,8 @@
 
 Sauna Quote X-Ray is a browser-native WebMCP app created for the [2026 WebMCP Challenge](https://openai.com/webmcp-challenge/). It gives the buyer and their AI agent the same live decision surface instead of hiding agent work in a separate chat transcript.
 
+**Live app:** [sauna-quote-xray.vercel.app/tools/sauna-quote-xray](https://sauna-quote-xray.vercel.app/tools/sauna-quote-xray)
+
 ## Why WebMCP matters here
 
 A sauna quote can look complete while excluding the $600 to $1,800 circuit, a $1,500 to $3,000 panel upgrade, permits, site work, ventilation, or service responsibility. The agent is good at turning messy scope into structure. The human knows what the seller actually promised. WebMCP lets both work on the same visible state.
