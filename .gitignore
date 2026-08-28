@@ -8,7 +8,9 @@ test-results/
 *.tsbuildinfo
 .vercel
 demo/*.aiff
+demo/*.mp3
 demo/*.mp4
 demo/*.webm
 demo/raw/
+demo/raw-v3/
 demo/review/

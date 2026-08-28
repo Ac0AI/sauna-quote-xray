@@ -4,11 +4,24 @@
 
 Sauna Quote X-Ray is a browser-native WebMCP app created for the [2026 WebMCP Challenge](https://openai.com/webmcp-challenge/). It gives the buyer and their AI agent the same live decision surface instead of hiding agent work in a separate chat transcript.
 
-**Live app:** [sauna-quote-xray.vercel.app/tools/sauna-quote-xray](https://sauna-quote-xray.vercel.app/tools/sauna-quote-xray)
+**Live product:** [sauna.guide/tools/sauna-quote-xray](https://sauna.guide/tools/sauna-quote-xray)
+
+**Standalone challenge mirror:** [sauna-quote-xray.vercel.app/tools/sauna-quote-xray](https://sauna-quote-xray.vercel.app/tools/sauna-quote-xray)
+
+**75-second demo:** [Watch Sauna Quote X-Ray use WebMCP](https://youtu.be/df5EVhSOWpA)
 
 Built by [Sauna Guide](https://sauna.guide), the independent home sauna buying guide.
 
 ![Sauna Quote X-Ray shared WebMCP canvas](./public/screenshots/sauna-quote-xray-desktop.png)
+
+## Judge it in 60 seconds
+
+1. Open the [live product](https://sauna.guide/tools/sauna-quote-xray) in ChatGPT's in-app browser.
+2. Ask: “Load the backyard quote. Make the missing electrical work explicit, flag anything still unclear, and build the contractor questions. Contact nobody.”
+3. Watch the visible canvas turn an $11,750 quote into a sourced planning range of $12,250 to $18,650 and six contractor questions.
+4. Change one scope status by hand, then ask the agent to inspect the canvas again. The human edit and agent read stay synchronized.
+
+Expected safety result: no quote is uploaded or persisted, no seller is contacted, and every tool result reports `persistedOrSent: false`.
 
 ## Why WebMCP matters here
 

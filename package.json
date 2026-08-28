@@ -13,7 +13,10 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit -p tsconfig.typecheck.json",
     "test": "node --test src/lib/*.test.ts",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "video:capture": "node scripts/capture-demo-stills.mjs",
+    "video:studio": "remotion studio video/index.ts --public-dir=video/public",
+    "video:render": "remotion render video/index.ts SaunaQuoteXRay demo/sauna-quote-xray-remotion.mp4 --public-dir=video/public"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -22,6 +25,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.58.2",
+    "@remotion/cli": "^4.0.518",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "^22",
     "@types/react": "^19.2.14",
@@ -29,6 +33,7 @@
     "eslint": "9.39.3",
     "eslint-config-next": "16.1.6",
     "postcss": "8.5.6",
+    "remotion": "^4.0.518",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3",
     "webmcp-types": "0.1.5"
