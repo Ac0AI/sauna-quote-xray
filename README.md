@@ -54,7 +54,9 @@ Then change a scope status by hand and ask the agent to inspect the canvas again
 
 ## Challenge-period work
 
-This project was built after the challenge opened on August 25, 2026. The initial functional implementation, safety hardening, browser journey tests, public repository, and deployment were completed on August 27, 2026. Git history preserves the dated work.
+Sauna Guide's editorial site, public buyer research, and design system existed before the challenge. The Sauna Quote X-Ray product itself was built after the challenge opened on August 25, 2026: the shared quote state, eight WebMCP tools, safety schemas, synthetic fixtures, automated tests, standalone deployment, and submission media are challenge-period work.
+
+See [CHALLENGE_PROVENANCE.md](./CHALLENGE_PROVENANCE.md) for the exact pre-existing boundary, dated commit evidence, and a file-level map of the eligible implementation.
 
 ## Run locally
 
