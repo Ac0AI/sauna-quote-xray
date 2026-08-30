@@ -1,5 +1,7 @@
 # Sauna Quote X-Ray
 
+[![Challenge verification](https://github.com/Ac0AI/sauna-quote-xray/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/Ac0AI/sauna-quote-xray/actions/workflows/verify.yml)
+
 > People and AI turn a sauna quote into an honest shared canvas, exposing hidden costs and the exact questions to ask before signing.
 
 Sauna Quote X-Ray is a browser-native WebMCP app created for the [2026 WebMCP Challenge](https://openai.com/webmcp-challenge/). It gives the buyer and their AI agent the same live decision surface instead of hiding agent work in a separate chat transcript.
