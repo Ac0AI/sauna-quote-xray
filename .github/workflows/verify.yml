@@ -49,3 +49,6 @@ jobs:
 
       - name: WebMCP browser journey
         run: pnpm test:e2e
+
+      - name: Production URL fresh-browser smoke
+        run: pnpm test:production

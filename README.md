@@ -79,9 +79,10 @@ pnpm typecheck
 pnpm lint
 pnpm build
 pnpm test:e2e
+pnpm test:production
 ```
 
-The Playwright journey installs a WebMCP registration harness, invokes all critical tools, checks negative inputs, and proves that agent mutations appear in the visible human canvas. See [TESTING.md](./TESTING.md) for the manual reviewer flow.
+The local Playwright journey installs a WebMCP registration harness, invokes all critical tools, checks negative inputs, and proves that agent mutations appear in the visible human canvas. The production smoke test repeats the core synthetic journey against `https://sauna.guide` in a fresh, unauthenticated browser context. See [TESTING.md](./TESTING.md) for the manual reviewer flow.
 
 ## Architecture
 
