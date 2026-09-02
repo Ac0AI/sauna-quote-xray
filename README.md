@@ -25,6 +25,15 @@ Built by [Sauna Guide](https://sauna.guide), the independent home sauna buying g
 
 Expected safety result: no quote is uploaded or persisted, no seller is contacted, and every tool result reports `persistedOrSent: false`.
 
+## Challenge criteria evidence
+
+| Criterion | What judges can verify |
+|---|---|
+| WebMCP Leverage | Eight page-scoped tools read and change one visible React state model through strict schemas and explicit safety annotations. The agent can complete the synthetic review across multiple tool calls while the buyer watches and edits the same canvas. |
+| Execution | The no-login production app, 75-second public demo, synthetic fixtures, reviewer instructions, and fresh-browser production smoke test form one complete, runnable buyer workflow. |
+| Potential Impact | A realistic $11,750 sauna quote becomes a sourced $12,250 to $18,650 planning range plus six concrete contractor questions before the buyer signs. |
+| Creativity and Ambition | The project makes WebMCP a shared decision surface for a high-cost purchase, not a chat-only advisor. Human corrections and agent actions stay synchronized, visible, and reversible without creating a lead. |
+
 ## Why WebMCP matters here
 
 A sauna quote can look complete while excluding the $600 to $1,800 circuit, a $1,500 to $3,000 panel upgrade, permits, site work, ventilation, or service responsibility. The agent is good at turning messy scope into structure. The human knows what the seller actually promised. WebMCP lets both work on the same visible state.
